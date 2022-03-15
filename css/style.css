@@ -25,12 +25,27 @@ body {
   font-family: roboto, sans-serif;
   letter-spacing: 0.03em;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul{
+margin-top: 0;
+margin-bottom: 0;
+}
+
+
 .page-header {
 }
 .conteiner {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   outline: 2px solid tomato;
 }
 /*logo*/
@@ -49,6 +64,8 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  font-weight: 700;
+
 }
 .logo-footer {
   color: var(--wite-color);
@@ -59,9 +76,18 @@ body {
 }
 
 /*site-nav*/
-
-.site-nav {
+.nav{
   display: flex;
+}
+.site-nav,
+.auth-nav {
+font-weight: 500;
+line-height: 1.14;
+letter-spacing: 00.02em;
+  display: flex;
+}
+.auth-nav{
+margin-left: auto;
 }
 .site-nav-link {
   display: block;
@@ -73,7 +99,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
 }
+
 .site-nav .item {
 }
 
@@ -90,9 +118,7 @@ body {
 /*auth-nav*/
 .page-header {
 }
-.auth-nav {
-  display: flex;
-}
+
 .item-auth + .item-auth {
   margin-left: 50px;
 }

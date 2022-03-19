@@ -7,6 +7,7 @@
   --bg-sectiom: #f5f4fa;
   --footer-nav: rgba(255, 255, 255, 0.6);
   --logo-color: #000000;
+  --header-border-color: #ececec; 
 }
 ul {
   list-style: none;
@@ -39,19 +40,45 @@ margin-bottom: 0;
 
 
 .page-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--header-border-color);
+}
+.head-page{
+display: flex;
+align-items: center;
+}
+.page-header .logo{
+  margin-right: 93px;
+  margin-top: 24px;
+  padding-bottom: 24px;
 }
 .conteiner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+ width: 1200px;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
   outline: 2px solid tomato;
 }
+.list{
+  list-style: none;
+  padding-inline-start: 0;
+  
+}
+.title{
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
 /*logo*/
 .logo {
+  display: block;
   color: var(--button-filter);
   text-decoration: none;
+  font-weight: 700;
   font-family: Raleway;
   font-size: 26px;
   line-height: 1.19;
@@ -76,14 +103,17 @@ margin-bottom: 0;
 }
 
 /*site-nav*/
-.nav{
+.nav-list{
   display: flex;
 }
 .site-nav,
-.auth-nav {
+.contact-list {
 font-weight: 500;
 line-height: 1.14;
-letter-spacing: 00.02em;
+letter-spacing: 0.02em;
+
+}
+.site-nav{
   display: flex;
 }
 .auth-nav{
@@ -101,13 +131,10 @@ margin-left: auto;
   text-decoration: none;
 
 }
-
-.site-nav .item {
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
-.site-nav .item + .item {
-  margin-left: 50px;
-}
 .site-nav-link:hover,
 .site-nav-link:focus {
   color: var(--button-filter);
@@ -115,14 +142,26 @@ margin-left: auto;
 .footer {
   background-color: var(--second-bg);
 }
+.site-nav-link link.current{
+color: var(--button-filter);
+}
 /*auth-nav*/
 .page-header {
 }
-
-.item-auth + .item-auth {
-  margin-left: 50px;
+.contact-list{
+  display: flex;
+  margin-left: auto;
 }
-
+.contact-item:not(:last-child){
+  margin-right: 50px;
+}
+.contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--text-description);
+  text-decoration: none;
+}
 .auth-nav-link-adress {
   text-decoration: none;
   font-size: 14px;
@@ -145,19 +184,9 @@ margin-left: auto;
 .auth-nav-link-footer:focus {
   color: var(--button-filter);
 }
-.auth-nav-link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--text-description);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-.auth-nav-link:hover,
-.auth-nav-link:focus {
+
+.contact-link:hover,
+.contact-link:focus {
   color: var(--button-filter);
 }
 /* hero*/

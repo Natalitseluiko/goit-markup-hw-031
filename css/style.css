@@ -8,6 +8,7 @@
   --footer-nav: rgba(255, 255, 255, 0.6);
   --logo-color: #000000;
   --header-border-color: #ececec; 
+  --portfolio-line-border: #eeeeee;
   --item-gap:40px
 }
 ul {
@@ -275,8 +276,7 @@ margin-left: calc( (-1) * var(--item-gap));
 .work-title{
     color: var(--title-text);
     text-align: center;
-    margin-top: 0;
-
+    margin-top: 30px;
   font-size: 36px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -347,56 +347,69 @@ letter-spacing: 00.03em;
   letter-spacing: 00.03em;
 }
 /*portfolio*/
-.button-portfolio {
-  display: inline-block;
+.work-example{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.example-title{
+  display: none;
+}
+.button-list{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filtre-item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-button{
   border-radius: 4px;
   padding: 6px 22px;
   color: var(--title-text);
   background-color: var(--bg-sectiom);
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
+  letter-spacing: 00.03em;
   line-height: 1.62;
-  cursor: pointer;
+  text-align: center;
+  
 }
-.button-portfolio:hover,
-.button-portfolio:focus {
+.portfolio-button:hover,
+.portfolio-button:focus {
   color: var(--wite-color);
   background-color: var(--button-filter);
 }
-.description-img-portfolio {
+.example-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc((-1) * var(--item-gap));
+  margin-top: calc((-1) * var(--item-gap));
+}
+.example-title{
+  margin-bottom: 4px;
   color: var(--title-text);
   font-size: 18px;
   line-height: 2;
+  letter-spacing: 0.06em;
 }
-.locations-img {
+.example-item{
+  flex-basis: calc(100% / 3 - var(--item-gap));
+  margin-left: var(--item-gap);
+  margin-top: var(--item-gap);
+}
+.example-img{
+  display: block;
+  max-width: 100%;
+}
+.example-description{
+  padding: 20px 24px;
+  border: 1px solid var(--portfolio-line-border);
+  border-top: 0;
+}
+.example-text{
   color: var(--text-description);
   font-size: 16px;
-  line-height: 1.8;
-}
-.test-conteiner{
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card-set{
-outline: 1px solid tomato;
-margin: 0;
-padding: 0;
-list-style: none;
-display: flex;
-flex-wrap: wrap;
-margin-top: -20px;
-margin-left: -20px;
-}
-.card-set > .item{
-  outline: 1px solid teal;
-  flex-basis: calc(100% / 3 -20px);
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.item{
-
+  line-height: 1.89;
+  letter-spacing: 0.03em;
 }

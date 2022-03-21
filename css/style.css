@@ -52,8 +52,7 @@ align-items: center;
 }
 .page-header .logo{
   margin-right: 93px;
-  margin-top: 24px;
-  padding-bottom: 24px;
+  
 }
 .container {
  width: 1200px;
@@ -99,6 +98,7 @@ align-items: center;
 
 /*site-nav*/
 .nav-list{
+  align-items: center;
   display: flex;
 }
 .site-nav,
@@ -161,13 +161,19 @@ color: var(--button-filter);
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
+  margin-bottom: 20px;
 }
-
+.footer .logo{
+  margin-bottom: 20px;
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--second-bg);
 }
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;}
+
 .footer-link.adress {
   text-decoration: none;
   font-size: 14px;
@@ -202,7 +208,7 @@ color: var(--button-filter);
   color: var(--wite-color);
   background-color: var(--second-bg);
   text-align: center;
-  margin-top: auto;
+  
 }
 .hero > .conteiner{
   width: 726px;
@@ -226,7 +232,7 @@ color: var(--button-filter);
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
-  margin-bottom: 200px;
+ 
   letter-spacing: 00.06em;
   
 }
@@ -238,7 +244,7 @@ color: var(--button-filter);
 
 
 /* преимущества*/
-.qualiti{
+.section{
 padding-top: 94px;
 padding-bottom: 94px;
 }
@@ -250,8 +256,14 @@ padding-bottom: 94px;
   flex-basis: calc(100% / 4 - var(--item-gap));
   margin-left: var(--item-gap);
 }
-.qualiti-title{
-  display: none;
+.visually-hidden{
+  position: absolute; 
+  white-space: nowrap;
+   width: 1px; height: 1px;
+    overflow: hidden; border: 0; 
+    padding: 0; clip: rect(0 0 0 0); 
+    clip-path: inset(50%); 
+    margin: -1px;
 }
 .qualiti-subtitle{
   margin-bottom: 10px;
@@ -276,13 +288,16 @@ padding-bottom: 94px;
 }
 /*work*/
 .work{
-  padding-bottom: 94px;
+  padding-top: 0;
   
+}
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .work-title{
     color: var(--title-text);
     text-align: center;
-    margin-top: 30px;
     margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.14;
@@ -296,14 +311,14 @@ padding-bottom: 94px;
 flex-basis: calc(100% / 3 - var(--item-gap));
 margin-left: var(--item-gap);
 }
-.work-img{
+.img{
 display: block;
 max-width: 100%;
+height: auto;
 }
 /*team*/
 .team{
-padding-top: 94px;
-padding-bottom: 94px;
+
 text-align: center;
 background-color: var(--bg-sectiom);
 }
@@ -331,6 +346,7 @@ max-width: 100%;
 .team-subtile {
   margin-bottom: 10px;
   font-weight: 500;
+  color: var(--logo-color);
 }
 .team-text{
 letter-spacing: 00.03em;
@@ -359,7 +375,7 @@ letter-spacing: 00.03em;
   padding-bottom: 94px;
 }
 .example-title{
-  display: none;
+
 }
 .button-list{
   display: flex;
